@@ -1,0 +1,312 @@
+:root {
+    --home-bg-color: #ffffff;
+    --menu-bg-color: #fffefb;
+    --silde-btn-border: #B2AC88;
+    --slide-btn-bg: #B2AC88;
+    --slide-btn-hoverbg: #b28e88;
+    --alpha-green: #B2AC88;
+    --icon-hover-color: #b29588;
+    --icon-hover-bg: #b29088;
+    --text-color: #ffffff;
+    --border-color: #967070;
+    --heading-color: #B2AC88;
+    --box-shadow-color: #B2AC88;
+    
+    --lightest-green: #B2AC88; /*this is the backgound*/
+    --light-green:#e8e3c8;
+    --dark-green: #efebd0;
+    
+    --box-shadow: 0px 0px 3px 5px var(--box-shadow-color);
+    --border-radius: 60px 5px;
+    --fade-green: #d2cdb2;
+  }
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+  }
+  body,
+  html {
+    width: 100%;
+    font-size: 10px;
+    color: var(--text-color);
+    font-weight: normal;
+    font-family: sans-serif;
+    background-color: var(--home-bg-color);
+  }
+  
+  #ham-menu {
+    display: none;
+  }
+  label[for="ham-menu"] {
+    display: block;
+    position: fixed;
+    top: 24px;
+    left: 20px;
+    z-index: 999;
+    width: 60px;
+    height: 60px;
+    background-color: var(--home-bg-color);
+    border-radius: 15px;
+    border: 2px solid var(--border-color);
+  }
+  .ham-menu {
+    width: 50vw;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    visibility: hidden;
+    transform: translate(-110%);
+    z-index: 998;
+    background-color: var(--lightest-green);
+    transition: 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .ham-menu > ul {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    padding: 20px;
+    height: 50%;
+  }
+  .ham-menu > ul > li {
+    font-size: 5rem;
+    white-space: nowrap;
+    letter-spacing: 0.15em;
+    cursor: pointer;
+    color: rgb(255, 255, 255);  /* this is the text colour of the side menu*/
+  }
+  #ham-menu:checked + label {
+    background-color: transparent;
+    border-color: var(--dark-green);
+  }
+  #ham-menu:checked ~ div.ham-menu {
+    transform: translate(0px);
+    visibility: visible;
+  }
+  .full-page-green {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--dark-green);
+    z-index: 997;
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+    transition: 500ms;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  #ham-menu:checked ~ div.full-page-green {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+  [for="ham-menu"] > div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    align-items: center;
+  }
+  .menu-line {
+    display: block;
+    width: 17px;
+    height: 2px;
+    margin: 10px 0 5px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    background-color: var(--border-color);
+    transition: 500ms;
+    transform-origin: right center;
+  }
+  [for="ham-menu"] > div > span:nth-child(4),
+  [for="ham-menu"] > div > span:nth-child(5),
+  [for="ham-menu"] > div > span:nth-child(6) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    transform-origin: left center;
+  }
+  #ham-menu:checked + label span {
+    background-color: var(--dark-green);
+  }
+  #ham-menu:checked + label span:nth-child(2),
+  #ham-menu:checked + label span:nth-child(5) {
+    transform: scale(0);
+  }
+  #ham-menu:checked + label span:nth-child(1) {
+    transform: translateY(17px) rotate(45deg);
+  }
+  #ham-menu:checked + label span:nth-child(4) {
+    transform: translateY(17px) rotate(-45deg);
+  }
+  #ham-menu:checked + label span:nth-child(3) {
+    transform: translateY(-17px) rotate(-45deg);
+  }
+  #ham-menu:checked + label span:nth-child(6) {
+    transform: translateY(-17px) rotate(45deg);
+  }
+  p {
+    display: inline;
+    font-size: 1.8rem;
+    line-height: 1.5em;
+    word-spacing: 0.5em;
+    letter-spacing: 0.1em;
+    font-family: "OpenSansCondensed-Light";
+  }
+  a {
+    font-size: 1.6rem;
+    line-height: 1.5em;
+    word-spacing: 0.5em;
+    letter-spacing: 0.1em;
+    font-family: "OpenSansCondensed-Light";
+    display: inline;
+    font-weight: bold;
+    padding: 7px;
+    color: var(--icon-hover-bg);
+  }
+  a::after {
+    content: "\e806";
+    display: inline-block;
+    font-family: fontello;
+    padding: 5px;
+    font-size: 1.6rem;
+    transform: rotate(-90deg);
+  }
+  .text {
+    font-size: 2.5rem;
+    line-height: 1.5em;
+    word-spacing: 0.5em;
+    letter-spacing: 0.1em;
+    font-family: "OpenSansCondensed-Bold", sans-serif;
+  }
+  .title {
+    font-size: 3rem;
+    line-height: 1.5em;
+    word-spacing: 0.5em;
+    letter-spacing: 0.1em;
+    font-family: "OpenSansCondensed-Bold", sans-serif;
+    color: var(--icon-hover-bg);
+    padding: 10px;
+  }
+  .heading {
+    font-size: 6rem;
+    line-height: 1.5em;
+    word-spacing: 0.5em;
+    letter-spacing: 0.1em;
+    font-family: "Patua One";
+  }
+  .centre-text {
+    text-align: center;
+  }
+  .bold-text {
+    font-weight: bold;
+  }
+  
+  /* this is for the header / title */
+  
+  *{padding: 0; margin: 0; box-sizing: border-box;}
+  body{height: 900px;}
+  header {
+      background: url('http://www.autodatz.com/wp-content/uploads/2017/05/Old-Car-Wallpapers-Hd-36-with-Old-Car-Wallpapers-Hd.jpg');
+      text-align: center;
+      width: 100%;
+      height: auto;
+      background-size: cover;
+      background-attachment: fixed;
+      position: relative;
+      overflow: hidden;
+      border-radius: 0 0 85% 85% / 30%;
+  }
+  header .overlay{
+      width: 100%;
+      height: 100%;
+      padding: 50px;
+      color: #FFF;
+      text-shadow: 1px 1px 1px #333;
+    background-image: linear-gradient( 135deg, #B2AC88 10%, #a9c494 100%);
+      
+  }
+  
+  h1 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 80px;
+      margin-bottom: 30px;
+  }
+  
+  h3, p {
+      font-family: 'Open Sans', sans-serif;
+      margin-bottom: 30px;
+  }
+  
+  
+  
+  /*This is for the slide show of pictures*/
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Position the image container (needed to position the left and right arrows) */
+  .container {
+    position: center;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+  
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Container for image text */
+  .caption-container {
+    text-align: center;
+    background-color: #B2AC88;
+    padding: 2px 16px;
+    color: rgb(255, 255, 255);
+    font-family: 'arial', sans-serif;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 16.66%;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }

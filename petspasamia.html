@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="petspasamia.css">
+
+    <script src="petspa.js"></script>
+
+    <title>Services</title>
+
+</head>
+
+<body>
+
+
+<!--this is the navigation bar-->
+    <header>
+        <nav>
+
+<input type="checkbox" id="ham-menu">
+
+        <label for="ham-menu">
+
+            <div
+               class="hide-des">
+               <span class="menu-line"></span>
+               <span class="menu-line"></span>
+               <span class="menu-line"></span>
+               <span class="menu-line"></span>
+               <span class="menu-line"></span>
+               <span class="menu-line"></span>
+            </div>
+
+        </label>
+
+<div
+class="full-page-green">
+</div>
+
+<div
+class="ham-menu">
+
+  <ul
+  class="centre-text bold-text">
+
+  <li><a href="./index.html">Home</a></li>
+  <li><a href="./petspasamia.html">Services</a></li>
+  <li><a href="./Gallery.html">Gallery</a></li>
+  <li><a href="./contactus.html">Contact Us</a></li>
+
+  </ul>
+
+</div>
+
+<!-- this is for the heading-->
+
+          </nav>
+
+
+          <div class="overlay">
+
+            <h1>Woof & Whiskers Spa Packages</h1>
+
+                <br>
+
+                 <p>
+
+                    At Woof and Whiskers, we believe that both you and your best friend deserve equal pampering.
+                    <br>
+                    This is why we are the only pet spa that offers services for both you and your pet.
+                    <br>
+
+
+                 </p>
+
+            <br>
+
+                </div>
+
+    </header>
+
+
+    <main>
+
+
+<br>
+<br>
+
+<!-- slideshow -->
+
+<!-- Container for the image gallery -->
+<div class="container">
+
+    <!-- Full-width images with number text -->
+
+    <div class="mySlides">
+
+
+        <img src="images/rabbit.jpg" style="width:500px; height:500px">
+
+            <p style="color:#B2AC88; float:right; padding-right:40%">
+
+            Cleansing bath
+            <br>
+            Standard shampoo
+            <br>
+            De-matting
+            <br>
+            Blow dry & brushing
+            <br>
+            Ear cleaning & plucking
+
+            </p>
+
+
+    </div>
+
+    <div class="mySlides">
+
+        <img src="images/kittennew.jpg" style="width:500px; height:500px">
+
+        <p style="color:#B2AC88; float:right; padding-right:40%">
+
+            Cleansing bath
+            <br>
+            Standard shampoo
+            <br>
+            De-matting
+            <br>
+            Blow dry & brushing
+            <br>
+            Ear cleaning & plucking
+            <br>
+            Nail clipping & filing
+            <br>
+            Paw butter
+            <br>
+            Teeth Clean
+
+            </p>
+
+    </div>
+
+    <div class="mySlides">
+
+        <img src="images/puppynew.jpg" style="width:500px; height:500px">
+
+        <!-- to make text go on the side of an image you need to make it float and do padding right-->
+
+    <p style="color:#B2AC88; float:right; padding-right:40%">
+
+        Deep cleansing bath
+        <br>
+        Premium shampoo
+        <br>
+        De-matting
+        <br>
+        Blow dry & brushing
+        <br>
+        Ear cleaning & plucking
+        <br>
+        Nail clipping & filing
+        <br>
+        Paw butter
+        <br>
+        Teeth Clean
+        <br>
+        Coat Conditioner
+
+    </p>
+
+    </div>
+
+    <div class="mySlides">
+
+        <img src="images/femalespa.jpg" style="width:600px; height:500px">
+
+    <p style="color:#B2AC88; float:right; padding-right:20%">
+
+      <br>
+      Aromatherapy Massage
+      <br>
+      Personalised Facial
+      <br>
+      Manicure
+      <br>
+      Pedicure
+      <br>
+      Robe, towel and slippers provided
+
+    </p>
+
+    </div>
+
+
+    <div class="mySlides">
+
+        <img src="images/malespa.jpg" style="width:500px; height:500px">
+
+
+
+    <p style="color:#B2AC88; float:right; padding-right:20%">
+
+      Swedish Massage
+        <br>
+        Personalised Facial
+        <br>
+        Sauna
+        <br>
+        Robe, towel and slippers provided
+    </p>
+
+    </div>
+
+
+
+    <!-- Image text -->
+    <div class="caption-container">
+      <p id="caption"> Click the images below to take a look at our packages </p>
+    </div>
+
+    <!-- Thumbnail images -->
+    <div class="row">
+      <div class="column">
+        <img class="demo cursor" src="images/rabbit.jpg" style="width:100px; height:100px" onclick="currentSlide(1)" alt="Bronze Package Pets">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="images/kittennew.jpg" style="width:100px; height: 100px" onclick="currentSlide(2)" alt="Silver Package Pets">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="images/puppynew.jpg" style="width:100px; height: 100px" onclick="currentSlide(3)" alt="Gold Package Pets">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="images/femalespa.jpg" style="width:130px; height: 130px; padding-bottom: 30px; padding-top:0px" onclick="currentSlide(4)" alt="Female Package Optional Add On">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="images/malespa.jpg" style="width:100px; height: 100px" onclick="currentSlide(5)" alt="Male Package Optional Add On">
+      </div>
+      <div class="column">
+        <img src="images/petspaphotonew.jpeg" style="width:100%; height:100%;">
+      </div>
+
+      </div>
+    </div>
+  </div>
+
+
+</body>
+</html>
