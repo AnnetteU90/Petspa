@@ -8,7 +8,7 @@
 }
 
 body, input,textarea{
-    background-image: url(Images/backdrop.jpg);
+    background-image: url(backdrop.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
